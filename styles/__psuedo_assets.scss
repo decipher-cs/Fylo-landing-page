@@ -14,15 +14,15 @@
   content: "";
   background: url("/images/illustration-intro.png") no-repeat;
   background-size: contain;
-  
+
   width: 100%;
   height: 100%;
 
   // $size: 80vw;
   // min-height: min(calc($size * 0.7416), 300px);
   // min-width: $size;
-// original height : 534px
-// original weidth: 720px
+  // original height : 534px
+  // original weidth: 720px
 }
 
 @mixin feature-card-psuedo-images($child, $url) {
@@ -42,44 +42,44 @@
 @include feature-card-psuedo-images(3, url("/images/icon-collaboration.svg"));
 @include feature-card-psuedo-images(4, url("/images/icon-any-file.svg"));
 
-.moto-section::before{
-    grid-row: 1 / -1 ;
-    justify-self: center;
+.moto-section::before {
+  grid-row: 1 / -1;
+  // justify-self: center;
 
-    display: inline-block;
+  display: inline-block;
 
-    content: "";
-    background: url("/images/illustration-stay-productive.png") no-repeat;
-    background-size: contain;
+  content: "";
+  background: url("/images/illustration-stay-productive.png") no-repeat;
+  background-size: contain;
 
-    $size-moto : 50vw;
+  @media screen and (min-width: $media-query-desktop) {
+    $size-moto: 50vw;
     width: $size-moto;
     height: calc($size-moto * 0.75609);
+  }
 
-
-// original diamensions.
-// width: 615px;
-// height: 465px;
-// RATIO : 1.32258;
-// 0.75609
+  // original diamensions.
+  // width: 615px;
+  // height: 465px;
+  // RATIO : 1.32258;
+  // 0.75609
 }
-.moto-section__link::after{
-    position: absolute;
-    display: inline-block;
+.moto-section__link::after {
+  position: absolute;
+  display: inline-block;
 
-    content: '';
-    background: url("/images/icon-arrow.svg");
-    background-size: contain;
+  content: "";
+  background: url("/images/icon-arrow.svg");
+  background-size: contain;
 
-    height: 20px;
-    width: 20px;
- 
+  height: 20px;
+  width: 20px;
 }
 
-.testimonial-section::before{
-    display: inline-block;
-    content: "";
-    background: url("/images/bg-quotes.png") no-repeat;
-    background-size: contain;
-    padding: 1em;
+.testimonial-section::before {
+  display: inline-block;
+  content: "";
+  background: url("/images/bg-quotes.png") no-repeat;
+  background-size: contain;
+  padding: 1em;
 }

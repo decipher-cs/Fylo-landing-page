@@ -53,13 +53,16 @@
 
 .moto-section::before {
   grid-row: 1/-1;
-  justify-self: center;
   display: inline-block;
   content: "";
   background: url("/images/illustration-stay-productive.png") no-repeat;
   background-size: contain;
-  width: 50vw;
-  height: 37.8045vw;
+}
+@media screen and (min-width: 700px) {
+  .moto-section::before {
+    width: 50vw;
+    height: 37.8045vw;
+  }
 }
 
 .moto-section__link::after {
@@ -156,7 +159,6 @@ html {
   grid-template-columns: 90vw;
   grid-template-rows: 90vw;
   justify-content: center;
-  align-items: center;
   gap: 20px;
   margin-bottom: min(10%, 250px);
 }
@@ -165,6 +167,7 @@ html {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(3, auto);
     grid-auto-flow: row;
+    align-items: center;
   }
   .moto-section .moto-section__title {
     grid-column: 2/3;

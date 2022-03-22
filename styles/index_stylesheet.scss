@@ -85,7 +85,6 @@ html {
   grid-template-rows: 90vw;
 
   justify-content: center;
-  align-items: center;
 
   gap: 20px;
 
@@ -95,6 +94,8 @@ html {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(3, auto);
     grid-auto-flow: row;
+  
+    align-items: center;
 
     .moto-section__title {
       grid-column: 2 / 3;
