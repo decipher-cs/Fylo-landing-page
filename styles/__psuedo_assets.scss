@@ -83,3 +83,44 @@
   background-size: contain;
   padding: 1em;
 }
+
+@mixin testimonia-card__author-images($child, $url) {
+// .testimonial-card:nth-child(#{$child}) .testimonial-card__author::before{
+.testimonial-card:nth-child(#{$child})::after{
+  position: relative;
+
+  display: inline-block;
+  content: '';
+  background: #{$url} no-repeat;
+  background-size: contain;
+
+  height: 20px;
+  width: 20px;
+
+  border-radius: 50%;
+}
+}
+
+@include testimonia-card__author-images(1, url("/images/profile-1.jpg"));
+@include testimonia-card__author-images(2, url("/images/profile-2.jpg"));
+@include testimonia-card__author-images(3, url("/images/profile-3.jpg"));
+
+.end-footer::before{
+  display: inline-block;
+  content: '';
+  background: url("/images/logo.svg") no-repeat;
+  background-size: contain;
+
+  // height: 20px;
+  // width: 20px;
+  padding: 5em;
+
+ 
+}
+.end-footer::after{
+  display: inline-block;
+  content: '';
+  background: url("/images/icons8-facebook.svg") no-repeat;
+  height: 50px;
+  width: 50px;
+}

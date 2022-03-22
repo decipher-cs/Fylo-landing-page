@@ -12,7 +12,7 @@ $Cyan-inside-call-to-action-gradient: hsl(176, 68%, 64%);
 $Blue-inside-call-to-action-gradient: hsl(198, 60%, 50%);
 $Light-Red-error: hsl(0, 100%, 63%);
 
-
+$global-border-radius: 5px;
 $media-query-desktop: 700px;
 @mixin btn-design() {
     background: linear-gradient(45deg, $Cyan-inside-call-to-action-gradient, $Blue-inside-call-to-action-gradient);
