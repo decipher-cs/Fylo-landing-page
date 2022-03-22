@@ -105,22 +105,54 @@
 @include testimonia-card__author-images(2, url("/images/profile-2.jpg"));
 @include testimonia-card__author-images(3, url("/images/profile-3.jpg"));
 
+//Fylo logo in the footer
 .end-footer::before{
+
+  @media screen and (min-width: $media-query-desktop){
+    grid-column: 1/5;
+  }
   display: inline-block;
   content: '';
+ 
   background: url("/images/logo.svg") no-repeat;
   background-size: contain;
 
-  // height: 20px;
-  // width: 20px;
-  padding: 5em;
-
- 
+  width: 200px;
+  height: 80px;
 }
+
+//Social media icons in the footer
 .end-footer::after{
+  align-self: center;
+  @media screen and (min-width: $media-query-desktop){
+    align-self: center;
+  }
+
   display: inline-block;
   content: '';
-  background: url("/images/icons8-facebook.svg") no-repeat;
-  height: 50px;
-  width: 50px;
+  background: url("/images/icons8-facebook.svg") left no-repeat, url("/images/icons8-twitter.svg") center no-repeat, url("/images/icons8-instagram.svg") right no-repeat;
+  height: 30px;
+  width: 100px;
+}
+
+@mixin footer-icons() {
+  display: inline-block;
+  content: '';
+  background-size: fill;
+  height: 18px;
+  width: 20px; 
+  margin-bottom: -5px;
+  margin-right: 1px;
+}
+.end-footer__address::before{
+  @include footer-icons();
+  background: url("/images/icon-location.svg") no-repeat;
+}
+.end-footer__contact-details__phone-number::before{
+  @include footer-icons();
+  background: url("/images/icon-phone.svg") no-repeat;
+}
+.end-footer__contact-details__email-id::before{
+  @include footer-icons();
+  background: url("/images/icon-email.svg") no-repeat;
 }
