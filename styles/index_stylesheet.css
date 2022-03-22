@@ -166,19 +166,21 @@ html {
     grid-template-rows: repeat(3, auto);
     grid-auto-flow: row;
   }
-}
-.moto-section .moto-section__title {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-.moto-section .moto-section__para {
-  grid-column: 2/3;
-  grid-row: 2/3;
+  .moto-section .moto-section__title {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .moto-section .moto-section__para {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .moto-section .moto-section__link {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
 }
 .moto-section .moto-section__link {
   position: relative;
-  grid-column: 2/3;
-  grid-row: 2/3;
   justify-self: flex-start;
 }
 
