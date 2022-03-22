@@ -41,59 +41,93 @@ html {
   background: url("/images/bg-curvy-mobile.svg") no-repeat bottom;
   background-size: contain;
   background-color: $intro-and-email-sign-up-background;
-  
-  @media screen and (min-width: $media-query-desktop){
+
+  @media screen and (min-width: $media-query-desktop) {
     background: url("/images/bg-curvy-desktop.svg") no-repeat bottom;
     background-color: $intro-and-email-sign-up-background;
   }
 
-
-  .hero-heading__para{
+  .hero-heading__para {
     padding: 2em max(10px, 10%);
   }
 
-  .hero-heading__sign-up-button{
+  .hero-heading__sign-up-button {
     @include btn-design();
     width: min(40%, 250px);
   }
-
 }
 
 .feature-section {
   display: grid;
-  grid-template-columns: 90vw;
+  grid-template-columns: minmax(0px, 90vw);
+
+  @media screen and (min-width: $media-query-desktop) {
+    grid-template-columns: 1fr 1fr;
+  }
 
   justify-content: center;
-  
+  justify-items: center;
+
   gap: 20px;
 
-  .feature-card{
-      justify-items: center;
-      text-align: center;
-
+  .feature-card {
+    justify-items: center;
+    text-align: center;
+    padding: 10%;
+    // max-width: 350px;
+    // min-width: none;
   }
 }
 
-.moto-section{
-    display: grid;
-    justify-items: center;
+.moto-section {
+  display: grid;
+  grid-template-columns: 90vw;
+  grid-template-rows: 90vw;
 
-    .moto-section__link{
-        justify-self: start;
-    }
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+  margin-bottom: min(10%, 250px);
+
+  @media screen and (min-width: $media-query-desktop) {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: row;
+  }
+
+  .moto-section__title{
+    grid-column: 2 / 3;
+    // grid-row: span 3;
+    grid-row: 2 / 3 ;
+  }
+  .moto-section__para{
+    grid-column: 2 / 3;
+    // grid-row: span 2;
+    grid-row: 2 / 3;
+  }
+  .moto-section__link {
+    position: relative;
+    
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    
+    justify-self: flex-start;
+  }
 }
 
-.testimonial-section{
-    display: flex;
-    flex-direction: column;
+.testimonial-section {
+  display: flex;
+  flex-direction: column;
 
-    gap: 30px;
+  gap: 30px;
 
-    .testimonial-card{
-      background-color: $testimonials-background;
-    }
+  .testimonial-card {
+    background-color: $testimonials-background;
+  }
 }
 
 // .registration-section{
-  // background-color: $intro-and-email-sign-up-background;
+// background-color: $intro-and-email-sign-up-background;
 // }

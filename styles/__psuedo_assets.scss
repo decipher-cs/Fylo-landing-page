@@ -43,11 +43,37 @@
 @include feature-card-psuedo-images(4, url("/images/icon-any-file.svg"));
 
 .moto-section::before{
+    grid-row: 1 / -1 ;
+    justify-self: center;
+
     display: inline-block;
+
     content: "";
     background: url("/images/illustration-stay-productive.png") no-repeat;
     background-size: contain;
-    padding: 3em;
+
+    $size-moto : 50vw;
+    width: $size-moto;
+    height: calc($size-moto * 0.75609);
+
+
+// original diamensions.
+// width: 615px;
+// height: 465px;
+// RATIO : 1.32258;
+// 0.75609
+}
+.moto-section__link::after{
+    position: absolute;
+    display: inline-block;
+
+    content: '';
+    background: url("/images/icon-arrow.svg");
+    background-size: contain;
+
+    height: 20px;
+    width: 20px;
+ 
 }
 
 .testimonial-section::before{
