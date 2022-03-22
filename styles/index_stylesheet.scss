@@ -1,0 +1,99 @@
+@import "__var.scss", "__psuedo_assets.scss";
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Fredoka", sans-serif;
+  color: white;
+}
+
+html {
+  background-color: $main-background;
+}
+
+.top-navbar {
+  display: flex;
+  flex-grow: 1;
+
+  justify-content: end;
+  align-items: center;
+
+  padding: 1em;
+  gap: 5%;
+  margin-bottom: min(5%, 100px);
+}
+
+.hero-heading {
+  display: grid;
+  $size: 90vw;
+  grid-template-columns: min($size, 600px);
+  grid-template-rows: min(calc($size * 0.7416), 480px);
+
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+
+  margin-bottom: min(10%, 250px);
+
+  background: url("/images/bg-curvy-mobile.svg") no-repeat bottom;
+  background-size: contain;
+  background-color: $intro-and-email-sign-up-background;
+  
+  @media screen and (min-width: $media-query-desktop){
+    background: url("/images/bg-curvy-desktop.svg") no-repeat bottom;
+    background-color: $intro-and-email-sign-up-background;
+  }
+
+
+  .hero-heading__para{
+    padding: 2em max(10px, 10%);
+  }
+
+  .hero-heading__sign-up-button{
+    @include btn-design();
+    width: min(40%, 250px);
+  }
+
+}
+
+.feature-section {
+  display: grid;
+  grid-template-columns: 90vw;
+
+  justify-content: center;
+  
+  gap: 20px;
+
+  .feature-card{
+      justify-items: center;
+      text-align: center;
+
+  }
+}
+
+.moto-section{
+    display: grid;
+    justify-items: center;
+
+    .moto-section__link{
+        justify-self: start;
+    }
+}
+
+.testimonial-section{
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+
+    .testimonial-card{
+      background-color: $testimonials-background;
+    }
+}
+
+// .registration-section{
+  // background-color: $intro-and-email-sign-up-background;
+// }

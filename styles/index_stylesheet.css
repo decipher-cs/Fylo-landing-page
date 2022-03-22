@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap");
+.top-navbar::before {
+  display: inline-block;
+  flex-grow: 1;
+  content: "";
+  background: url("/images/logo.svg") no-repeat;
+  background-size: contain;
+  min-width: 140px;
+  min-height: auto;
+  padding: 1em;
+}
+
+.hero-heading::before {
+  display: inline-block;
+  content: "";
+  background: url("/images/illustration-intro.png") no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.feature-card:nth-child(1)::before {
+  display: inline-block;
+  content: "";
+  background: url("/images/icon-access-anywhere.svg") no-repeat;
+  background-size: contain;
+  padding: 35px;
+}
+
+.feature-card:nth-child(2)::before {
+  display: inline-block;
+  content: "";
+  background: url("/images/icon-security.svg") no-repeat;
+  background-size: contain;
+  padding: 35px;
+}
+
+.feature-card:nth-child(3)::before {
+  display: inline-block;
+  content: "";
+  background: url("/images/icon-collaboration.svg") no-repeat;
+  background-size: contain;
+  padding: 35px;
+}
+
+.feature-card:nth-child(4)::before {
+  display: inline-block;
+  content: "";
+  background: url("/images/icon-any-file.svg") no-repeat;
+  background-size: contain;
+  padding: 35px;
+}
+
+.moto-section::before {
+  display: inline-block;
+  content: "";
+  background: url("/images/illustration-stay-productive.png") no-repeat;
+  background-size: contain;
+  padding: 3em;
+}
+
+.testimonial-section::before {
+  display: inline-block;
+  content: "";
+  background: url("/images/bg-quotes.png") no-repeat;
+  background-size: contain;
+  padding: 1em;
+}
+
+*,
+::after,
+::before {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Fredoka", sans-serif;
+  color: white;
+}
+
+html {
+  background-color: #181f2a;
+}
+
+.top-navbar {
+  display: flex;
+  flex-grow: 1;
+  justify-content: end;
+  align-items: center;
+  padding: 1em;
+  gap: 5%;
+  margin-bottom: min(5%, 100px);
+}
+
+.hero-heading {
+  display: grid;
+  grid-template-columns: min(90vw, 600px);
+  grid-template-rows: min(66.744vw, 480px);
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  margin-bottom: min(10%, 250px);
+  background: url("/images/bg-curvy-mobile.svg") no-repeat bottom;
+  background-size: contain;
+  background-color: #1c2431;
+}
+@media screen and (min-width: 700px) {
+  .hero-heading {
+    background: url("/images/bg-curvy-desktop.svg") no-repeat bottom;
+    background-color: #1c2431;
+  }
+}
+.hero-heading .hero-heading__para {
+  padding: 2em max(10px, 10%);
+}
+.hero-heading .hero-heading__sign-up-button {
+  background: linear-gradient(45deg, #65e2d9, #339ecc);
+  border: 0px;
+  border-radius: 300px;
+  padding: 1em;
+  cursor: pointer;
+  width: min(40%, 250px);
+}
+
+.feature-section {
+  display: grid;
+  grid-template-columns: 90vw;
+  justify-content: center;
+  gap: 20px;
+}
+.feature-section .feature-card {
+  justify-items: center;
+  text-align: center;
+}
+
+.moto-section {
+  display: grid;
+  justify-items: center;
+}
+.moto-section .moto-section__link {
+  justify-self: start;
+}
+
+.testimonial-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.testimonial-section .testimonial-card {
+  background-color: #202a3c;
+}/*# sourceMappingURL=index_stylesheet.css.map */

@@ -1,0 +1,23 @@
+// Primary
+
+$intro-and-email-sign-up-background: hsl(217, 28%, 15%);
+$main-background: hsl(218, 28%, 13%);
+$footer-background: hsl(216, 53%, 9%);
+$testimonials-background: hsl(219, 30%, 18%);
+
+
+//  Accent
+
+$Cyan-inside-call-to-action-gradient: hsl(176, 68%, 64%);
+$Blue-inside-call-to-action-gradient: hsl(198, 60%, 50%);
+$Light-Red-error: hsl(0, 100%, 63%);
+
+
+$media-query-desktop: 700px;
+@mixin btn-design() {
+    background: linear-gradient(45deg, $Cyan-inside-call-to-action-gradient, $Blue-inside-call-to-action-gradient);
+    border: 0px;
+    border-radius: 300px;
+    padding: 1em;
+    cursor: pointer;
+}
